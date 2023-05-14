@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join Chat Room</h2>
+                <div class="form-input">
+                    <label for="">Username</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">ChatRoom</div>
+                <button id="exit-user">Exit</button>
+            </div>
+            <div class="messages">
+                <!--- dummy msgs ------>
+                
+                <!--- dummy msgs ------>
+            </div>
+            <div class="typebox">
+                <input type="text" id="msg-input">
+                <button id="send-msg">Send</button>
+            </div>
+        </div>
+    </div>
+
+   
+<!-- <script>
+    function addMessages(message){
+	$("#messages").append('<div><strong>'+message.name.charAt(0).toUpperCase()+message.name.slice(1)+'</strong> says: <br><span>'+message.message+'</span></div><hr/>');
+}
+
+function getMessages(){
+  $.get('http://localhost:3000/messages', (data) => {
+	data.forEach(addMessages);
+  })
+}
+
+function sendMessage(message){
+  $.post('http://localhost:3000/messages', message)
+  $("#name").val("");
+  $("#message").val("");
+}
+</script> -->
+
+<script src="socket.io/socket.io.js"></script>
+<script src="code.js"></script>
+</body>
+</html>
